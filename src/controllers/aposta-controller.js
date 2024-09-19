@@ -38,3 +38,14 @@ async function update(req, res) {
 
 
 export default {store, show, update, index}
+
+
+
+
+
+
+// .env
+// MONGODB="mongodb://localhost:27017/jogobicho"
+
+// API_PORT="4000"
+
