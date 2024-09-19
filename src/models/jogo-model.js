@@ -6,8 +6,8 @@ const jogoSchema = new Schema({
     numeroEscolhido: [{
         type: Schema.Types.Number,
         required: false,
-        min: 0,
-        max: 99
+        min: 1,
+        max: 100
     }], 
     // vencedores: [{
     //     type: Schema.Types.ObjectId,

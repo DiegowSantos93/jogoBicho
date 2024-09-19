@@ -45,4 +45,24 @@ async function destroy(req, res) {
     }
 }
 
-export default {store, show, update, index, destroy}
+async function resolve(req, res) {
+    try {
+        const numeroEscolhido = [
+            Math.ceil(Math.random() * 100),
+            Math.ceil(Math.random() * 100),
+            Math.ceil(Math.random() * 100),
+            Math.ceil(Math.random() * 100),
+            Math.ceil(Math.random() * 100),
+        ]
+
+        await Jogo.findByIdAndUpdate(req.params.id,{
+            numeroEscolhido
+        } )
+        
+        res.json();
+    } catch (error) {
+        res.status(400).json(error);
+    }
+}
+
+export default {store, show, update, index, destroy, resolve}
